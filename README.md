@@ -18,3 +18,8 @@ Tools and Tecnologies Used
 * Postman
 * Google Cloud Platform
 
+API Info
+* `rest/v1/calendar/init/` --> Prompts Google Consent Screen
+* `rest/v1/calendar/redirect` --> Handles redirect request sent by google with code for token
+* `rest/v1/calendar/store-events/` --> Retrieves and stores the calendar events of the user
+* `rest/v1/calendar/get-user-events/` --> Gets user events from database
