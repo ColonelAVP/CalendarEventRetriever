@@ -23,6 +23,9 @@ get users calendar access. Below are detail of API endpoint and corresponding vi
 * `rest/v1/calendar/store-events/` --> Retrieves and stores the calendar events of the user
 * `rest/v1/calendar/get-user-events/` --> Gets user events from database
 
+## Postman Collection --> [Here](https://github.com/ColonelAVP/CalendarEventRetriever/blob/master/Google_Calender_API_collection.postman_collection)
+
+
 ## References
 * [Django docs](https://www.djangoproject.com/start/)
 * [Django REST Framework docs](https://www.django-rest-framework.org/)
