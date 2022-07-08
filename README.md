@@ -1,5 +1,4 @@
-# Convin.ai Pre-Internship Task
-
+# Calendar Event Retriever
 ## Task
 - Implement google calendarintegration using django rest api. You need to use the OAuth2 mechanism to
 get users calendar access. Below are detail of API endpoint and corresponding views which you need to implement
@@ -31,4 +30,7 @@ get users calendar access. Below are detail of API endpoint and corresponding vi
 * [Outh 2.0](https://oauth.net/2/)
 
 ## Screenshots
-![alt_tag]()
+* Get-Consent-Screen
+![alt_tag](https://raw.githubusercontent.com/ColonelAVP/CalendarEventRetriever/master/Outputs/consent_window.png)
+* Stored-Events
+![alt_tag](https://raw.githubusercontent.com/ColonelAVP/CalendarEventRetriever/master/Outputs/events_store_in_DB.png)
