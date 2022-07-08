@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "83ac5ee6-710d-42ef-b864-53c5f1a799a3",
+		"name": "Google Calender",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get google consent screen",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Host",
+						"value": "http://127.0.0.1:8000/",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/rest/v1/calendar/init/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"rest",
+						"v1",
+						"calendar",
+						"init",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get google consent screen",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Host",
+								"value": "http://127.0.0.1:8000/",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/rest/v1/calendar/init/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"rest",
+								"v1",
+								"calendar",
+								"init",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jul 2022 20:19:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "485"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"response\": \"https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=47091461255-f7ltvdbt0uufq99da688uofnt7e0moi8.apps.googleusercontent.com&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Frest%2Fv1%2Fcalendar%2Fredirect&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.events.readonly+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly&state=hx8yxnoKIgvRfSuoAEbZDlkWLU7GKU&prompt=consent&access_type=offline\",\n    \"message\": \"Url generated succesfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Fetch Store User Events",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_email",
+							"value": "atharvpatil75@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/rest/v1/calendar/store-events/?user_email=atharvpatil75@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"rest",
+						"v1",
+						"calendar",
+						"store-events",
+						""
+					],
+					"query": [
+						{
+							"key": "user_email",
+							"value": "atharvpatil75@gmail.com"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Fetch Store User Events",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_email",
+									"value": "atharvpatil75@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/rest/v1/calendar/store-events/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"rest",
+								"v1",
+								"calendar",
+								"store-events",
+								""
+							],
+							"query": [
+								{
+									"key": "user_email",
+									"value": "atharvpatil75@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jul 2022 20:19:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"User Events store successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get user events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/rest/v1/calendar/get-user-events/?user_email=athervpatil05@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"rest",
+						"v1",
+						"calendar",
+						"get-user-events",
+						""
+					],
+					"query": [
+						{
+							"key": "user_email",
+							"value": "athervpatil05@gmail.com"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get user events",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/rest/v1/calendar/get-user-events/?user_email=athervpatil05@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"rest",
+								"v1",
+								"calendar",
+								"get-user-events",
+								""
+							],
+							"query": [
+								{
+									"key": "user_email",
+									"value": "athervpatil05@gmail.com"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 07 Jul 2022 20:59:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10149"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"response\": {\n        \"Ptm\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"Ptm\",\n            \"description\": \"Ptm\",\n            \"location\": null,\n            \"html_link\": \"https://www.google.com/calendar/event?eid=NjByMzZkaGljbGkzMGI5bjcxaDZhYjlrNjlpajBiOXBjZ3I2OGJiMzc1ajNhcGhsY2twNjRvajM2ZyBhdGhlcnZwYXRpbDA1QG0\",\n            \"start_date\": \"2018-01-13T21:30:00+05:30\",\n            \"end_date\": \"2018-01-13T22:30:00+05:30\"\n        },\n        \"Beerparty\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"Beerparty\",\n            \"description\": null,\n            \"location\": null,\n            \"html_link\": \"https://www.google.com/calendar/event?eid=NmRpNjZjOWk2bGg2OGI5aWNkaTZhYjlrNjBvbTZiOXBjNWg2Y2I5ZzcwczZhYzlqNmNxbTRvaGk3NCBhdGhlcnZwYXRpbDA1QG0\",\n            \"start_date\": \"2018-05-05T17:30:00+05:30\",\n            \"end_date\": \"2018-05-05T18:30:00+05:30\"\n        },\n        \"Bhaai - Vyakti Kee Valli Part 2 (U)\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"Bhaai - Vyakti Kee Valli Part 2 (U)\",\n            \"description\": \"To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\\n\\nThis event was created from an email that you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPWI_AY8Mun292c3ETFRNgnnsYB8llsTCA\\n\",\n            \"location\": \"Raj Nova Cinemaz: Karjat(Screen 2), Karjat, Maharashtra, India, 410201\",\n            \"html_link\": \"https://www.google.com/calendar/event?eid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVobmo0Y2oyNjVtNmtzcjE2c3JtNHMzaTZobW1jcDNjZW9yNmF0OWllOHJtYWNyY2Voazc2ZDNhZWRvajRkOWo2ZGltcWViNWU1cDMwdDNiZGxxMzAgYXRoZXJ2cGF0aWwwNUBt\",\n            \"start_date\": \"2019-02-10T21:30:00+05:30\",\n            \"end_date\": \"2019-02-10T22:30:00+05:30\"\n        },\n        \"Dhurala (U/A)\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"Dhurala (U/A)\",\n            \"description\": \"To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\\n\\nThis event was created from an email that you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPqTmTNO1tfy5cDjUYipEh_aqUm19MFEGo\\n\",\n            \"location\": \"PVR: Orion Mall, Panvel(AUDI 02), Mumbai, Maharashtra, India, 400706\",\n            \"html_link\": \"https://www.google.com/calendar/event?eid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVncG0ycnI3NmhyNnFycG5lcG43Mm9ocDZwaTNhc2hqNzFubjJ0MW02ZGpuOHBqYWQ5cW1nYzlqY2RoNzZxcG9kZ3I2YWRqZGRwbGowcWplZHRnbWUgYXRoZXJ2cGF0aWwwNUBt\",\n            \"start_date\": \"2020-01-04T22:40:00+05:30\",\n            \"end_date\": \"2020-01-04T23:40:00+05:30\"\n        },\n        \"Day 1 learning python\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"Day 1 learning python\",\n            \"description\": \"Starting to learn python from today\",\n            \"location\": \"Karanjade, Panvel, Navi Mumbai, Maharashtra, India\",\n            \"html_link\": \"https://www.google.com/calendar/event?eid=Y3BqMzZlMzFjNWkzZWI5amM4cGpnYjlrYzRxajhiYjI2OHJqMGI5cDZrcWppZDlrYzRvNjJwOWc2MCBhdGhlcnZwYXRpbDA1QG0\",\n            \"start_date\": null,\n            \"end_date\": null\n        },\n        \"Python Training & Certification Webinar\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"Python Training & Certification Webinar\",\n            \"description\": \"Webinar: Python Training & Certification Webinar\\nDescription: Add new verticals to your career with Python Ultimate Course from Perfect Plan B. Learn from OK Google Developer. 100% Internship and Job Placement.\\nHost(s): Perfect eLearning, Jyoti Sharma\\nWebinar link: https://event.webinarjam.com/go/live/529/10l22h2ptlqpay222bo0x5\",\n            \"location\": null,\n            \"html_link\": \"https://www.google.com/calendar/event?eid=M2oxNXV1YXBzOWg2NDhkbmc1Zjd2dmQ1cGQgYXRoZXJ2cGF0aWwwNUBt\",\n            \"start_date\": \"2021-03-30T17:00:00+05:30\",\n            \"end_date\": \"2021-03-30T18:00:00+05:30\"\n        },\n        \"Free Google Cloud Fundamentals Big Data & Machine Learning Training Binx.io\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"Free Google Cloud Fundamentals Big Data & Machine Learning Training Binx.io\",\n            \"description\": \"To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\",\n            \"location\": \"https://www.linkedin.com/events/freegooglecloudfundamentalstrai6785509977512558592\",\n            \"html_link\": \"https://www.google.com/calendar/event?eid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVocDY0cmI5Y2tzbWtxMWlkMXFtZ3EzYjYxaDZndDM0ZGtvMzBwYmVja29taXIzNzZocW1pc2o2ZDBzamV0YmplNW1taWNwaGRrcW42cnIyYzVwMzAgYXRoZXJ2cGF0aWwwNUBt\",\n            \"start_date\": \"2021-06-08T12:30:00+05:30\",\n            \"end_date\": \"2021-06-08T20:30:00+05:30\"\n        },\n        \"Interview with Arthev Patel\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"Interview with Arthev Patel\",\n            \"description\": \"\\n\\n\\n________________________________________________________________________________\\nMicrosoft Teams meeting\\nJoin on your computer or mobile app\\nClick here to join the meeting<https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzAzYTZkYzEtOTRiNC00OTc5LTkyYjQtODAyYWZiYmZjN2Ez%40thread.v2/0?context=%7b%22Tid%22%3a%224c312d7c-61bc-4462-964d-f8cd190f4146%22%2c%22Oid%22%3a%2249f89b59-cede-4d99-ab94-5fa8230a5450%22%7d>\\nLearn More<https://aka.ms/JoinTeamsMeeting> | Meeting options<https://teams.microsoft.com/meetingOptions/?organizerId=49f89b59-cede-4d99-ab94-5fa8230a5450&tenantId=4c312d7c-61bc-4462-964d-f8cd190f4146&threadId=19_meeting_MzAzYTZkYzEtOTRiNC00OTc5LTkyYjQtODAyYWZiYmZjN2Ez@thread.v2&messageId=0&language=en-US>\\n________________________________________________________________________________\\n\",\n            \"location\": null,\n            \"html_link\": \"https://www.google.com/calendar/event?eid=XzYwcTMwYzFnNjBvMzBlMWk2MG80YWMxZzYwcmo4Z3BsODhyajJjMWg4NHMzNGg5ZzYwczMwYzFnNjBvMzBjMWc2NTEzYWNpMjZncjQyZHBuNzBwazhkcGc2NG8zMGMxZzYwbzMwYzFnNjBvMzBjMWc2MG8zMmMxZzYwbzMwYzFnODhzMzRoaGc2b3EzNmUxajhncGoyY3BrNmtzNGNoOWc4b3JrNmgxbjZkMjM0Y2k0Nm9yZyBhdGhlcnZwYXRpbDA1QG0\",\n            \"start_date\": \"2021-07-28T17:00:00+05:30\",\n            \"end_date\": \"2021-07-28T17:30:00+05:30\"\n        },\n        \"DOCSUP INTERNSHIP 2021\": {\n            \"user_email\": \"fileadventure2020@gmail.com\",\n            \"event_name\": \"DOCSUP INTERNSHIP 2021\",\n            \"description\": null,\n            \"location\": null,\n            \"html_link\": \"https://www.google.com/calendar/event?eid=MTNsdWlhMG1hampudGFmdGNoZGhmMjEzdDQgYXRoZXJ2cGF0aWwwNUBt\",\n            \"start_date\": \"2021-08-08T15:00:00+05:30\",\n            \"end_date\": \"2021-08-08T15:15:00+05:30\"\n        },\n        \"Antim: The Final Truth (U/A)\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"Antim: The Final Truth (U/A)\",\n            \"description\": \"To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\\n\\nThis event was created from an email that you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DP2SqvpHu8p7Pj7Z0Rsq32pxGPtGhrYKTA\\n\",\n            \"location\": \"PVR: Orion Mall, Panvel(AUDI 03), Navi Mumbai, Maharashtra, India\",\n            \"html_link\": \"https://www.google.com/calendar/event?eid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVobm11cnJmNzVvM2VxajdkZGwzNHQzNjZvcjZzc2oyNjVqbWF0YmI2OHFqMGQzMmNrcDNpc2hpNzVuNjhwcjZkdGk2bXExbmN0aW00ZDlnZDhwMzAgYXRoZXJ2cGF0aWwwNUBt\",\n            \"start_date\": \"2021-11-30T23:00:00+05:30\",\n            \"end_date\": \"2021-12-01T00:00:00+05:30\"\n        },\n        \"The Kashmir Files (A)\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"The Kashmir Files (A)\",\n            \"description\": \"To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\\n\\nThis event was created from an email that you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DOO-B69fgIztxjgbJkJfifKKUv4fCFEIBM\\n\",\n            \"location\": \"PVR: Orion Mall, Panvel(AUDI 02), Navi Mumbai, Maharashtra, India\",\n            \"html_link\": \"https://www.google.com/calendar/event?eid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVobTc4Y2IxY2RobWVzMzFja3I3NGNoZzc0cGowc2JkY3BobjRwcHA2MW43OG9yNjZkazM4cWpqNmtyajJvOWdlMW5tYWRiZGM4cm5jc2oxNjVuNmUgYXRoZXJ2cGF0aWwwNUBt\",\n            \"start_date\": \"2022-03-19T22:30:00+05:30\",\n            \"end_date\": \"2022-03-19T23:30:00+05:30\"\n        },\n        \"RRR (Hindi) (U/A)\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"RRR (Hindi) (U/A)\",\n            \"description\": \"To see detailed information for automatically created events like this one, use the official Google Calendar app. https://g.co/calendar\\n\\nThis event was created from an email that you received in Gmail. https://mail.google.com/mail?extsrc=cal&plid=ACUX6DPyTfThVV0_lC_Jqn4WpGPKCpbB4F_7I3Q\\n\",\n            \"location\": \"PVR: Orion Mall, Panvel(AUDI 05), Navi Mumbai, Maharashtra, India\",\n            \"html_link\": \"https://www.google.com/calendar/event?eid=XzZ0bG5hcXJsZTVwNmNwYjRkaG1qNHBocGVoaG11b2JjZDVxMzRyMzdjOWdtOHBoaGQ4cW00cWhsNnRrNjJvcG1kbGs3NnBiZWVwb2ppcTNnNjFyNmVxajdjNXFqMHJiZWRkb21xcWJmNjVuNmUgYXRoZXJ2cGF0aWwwNUBt\",\n            \"start_date\": \"2022-04-03T21:30:00+05:30\",\n            \"end_date\": \"2022-04-03T22:30:00+05:30\"\n        },\n        \"Please complete the test, 'Trilogy Innovations 12th June 2022' by Trilogy Innovations\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"Please complete the test, 'Trilogy Innovations 12th June 2022' by Trilogy Innovations\",\n            \"description\": \"Hi athervpatil05_c49c377f46ed, \\n\\n\\nYou have been invited to take part in Trilogy Innovations 12th June 2022 by Trilogy Innovations .\\n\\nThis test will be active from 12 Jun 2022 11:00 AM IST (12/06/2022 05:30 UTC) to 12 Jun 2022 1:30 PM IST (12/06/2022 08:00 UTC). You will have 2 hours to complete the test if you start the test before 12 Jun 2022 11:30 AM IST.\\n\\n\\nYou can access the test at, https://interviewbit.com/test/3cc2b636ed/?slug=ea29b191fb20882ef1f8b11d552eb4b03d30c58a\\n\\n \\n\\nYou won't be allowed to attempt the test after its expiry and any submissions after expiry time will be invalid.\\n\\nNOTE: DO NOT SHARE THIS LINK WITH ANYONE\\n\\n\\\"Kindly REGISTER for the contest by June 12th at 9 a.m.\\\"\\n\\n\\nRegards,\\n\\nTeam InterviewBit\",\n            \"location\": \"Karanjade, Panvel, Navi Mumbai, Maharashtra, India\",\n            \"html_link\": \"https://www.google.com/calendar/event?eid=MjM2ZGxpYW9ha3I4djE5cm5idmYxcmg2MXQgYXRoZXJ2cGF0aWwwNUBt\",\n            \"start_date\": \"2022-06-12T10:00:00+05:30\",\n            \"end_date\": \"2022-06-12T11:00:00+05:30\"\n        },\n        \"Exam\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"Exam\",\n            \"description\": null,\n            \"location\": null,\n            \"html_link\": \"https://www.google.com/calendar/event?eid=NWFvNjUwNDNrYnBtMnY2YnQ4dGcxdGRlanEgYXRoZXJ2cGF0aWwwNUBt\",\n            \"start_date\": \"2022-07-06T02:00:00+05:30\",\n            \"end_date\": \"2022-07-06T03:00:00+05:30\"\n        },\n        \"ROAD TRIP\": {\n            \"user_email\": \"athervpatil05@gmail.com\",\n            \"event_name\": \"ROAD TRIP\",\n            \"description\": null,\n            \"location\": \"Lonavla, Maharashtra, India\",\n            \"html_link\": \"https://www.google.com/calendar/event?eid=MzlyMnQzMDFiY25rcGNocGJwdGJhMDFrYzMgYXRoZXJ2cGF0aWwwNUBt\",\n            \"start_date\": \"2022-07-09T03:00:00+05:30\",\n            \"end_date\": \"2022-07-09T04:00:00+05:30\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+    "python.pythonPath": "/usr/bin/python3",
+    "terminal.integrated.fontFamily": "Space Mono For Powerline",
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django",
+        "--disable",
+        "W0703,C0111,W0312"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black",
+    "editor.fontSize": 14
+}
